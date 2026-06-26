@@ -459,8 +459,11 @@
     }
 
     .project-feature--reverse .project-copy-card h2 {
+      width: 100%;
+      max-width: 560px;
       margin: 0 0 30px;
-      text-align: center;
+      margin-left: auto;
+      text-align: right;
     }
 
     .project-feature--reverse .project-subtitle {
@@ -899,8 +902,11 @@
     }
 
     .project-feature--snow .project-copy-card h2 {
+      width: 100%;
+      max-width: 560px;
       margin: 0 0 34px;
-      text-align: center;
+      margin-left: auto;
+      text-align: right;
       text-transform: none;
     }
 
@@ -1442,6 +1448,32 @@
       object-fit: cover;
       object-position: center;
       border-radius: inherit;
+    }
+
+    @media (max-width: 900px) {
+      .project-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .project-feature .project-copy-card {
+        order: 1;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .project-feature .project-carousel {
+        order: 2;
+      }
+
+      .project-feature .project-copy-card h2,
+      .project-feature .project-subtitle,
+      .project-feature .project-description {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+      }
     }
 
     .sr-only {
